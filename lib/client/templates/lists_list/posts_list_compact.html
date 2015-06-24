@@ -1,0 +1,53 @@
+<!-- 
+
+List List Compact Component
+
+title (String)
+| The title of the list list
+
+incoming (Cursor)
+| A cursor containing the new lists since render
+
+listsCursor (Cursor)
+| A cursor containing the list list
+
+listsCount (Number)
+| How many lists are loaded
+
+listsReady (Boolean)
+| Whether the subscription is ready
+
+hasMoreLists (Boolean)
+| Whether there are still more lists that can be loaded
+
+loadMoreHandler (Function)
+| What to do when the user clicks "load more"
+
+listsField (Object)
+| An object cont
+
+-->
+
+<template name="lists_list_compact">
+  <table>
+    <thead>
+      <tr>
+        <td>List</td>
+        <td>{{fieldLabel}}</td>
+      </tr>
+    </thead>
+    {{#each listsCursor}}
+      <tr>
+        <td><a href="{{pathFor route='list_page' _id=_id}}">{{title}}</a></td>
+        <td>{{fieldValue}}</td>
+      </tr>
+    {{/each}}
+    {{#if hasMoreLists}}
+      <tr>
+        <td colspan="2">
+          <a class="downvoted-more more-button grid-module" href="#"><span>{{_ "load_more"}}</span></a>
+        </td>
+      </tr>
+    {{/if}}
+  </table>
+</template>

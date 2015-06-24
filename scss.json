@@ -1,0 +1,7 @@
+{
+  "enableAutoprefixer": true,
+  "outputStyle": "compressed",
+  "sourceMap": true,
+  "useIndex": true,
+  "indexFilePath": "lib/client/scss/screen.scss"
+}

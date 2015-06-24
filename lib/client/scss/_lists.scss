@@ -1,0 +1,126 @@
+// ------------------------------------ list ------------------------------------ //
+.list {
+  padding: 11px 0 11px 10px;
+  @include small {
+    padding: 11px 10px 11px 0;
+  }
+  &:hover {
+    background-color: darken(white, 3%);
+  }
+}
+
+.list-list-title, .page-title {
+  display: none;
+}
+
+// ------------------------------------ lists views nav ------------------------------------ //
+.lists-list-views {
+  .menu-top-level {
+    font-size: 11px;
+    //margin-right: 20px;
+    @include small {
+      font-size: 9px;
+    }
+  }
+  .menu-contents {
+    margin-left: -45px;
+    @include small {
+      margin: 0 2px 0 -2px;
+    }
+  }
+  .menu-item {
+    text-transform: uppercase;
+    a {
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: $main;
+      @include small {
+        font-size: 9px;
+      }
+      &:hover {
+        color: lighten($main, 15%);
+        letter-spacing: 0.9px;
+      }
+
+      -webkit-transition: 0.05s ease-in-out;
+      -moz-transition: 0.05s ease-in-out;
+      -o-transition: 0.05s ease-in-out;
+      transition: 0.05s ease-in-out;
+    }
+  }
+}
+
+// ------------------------------ lists-list layout ------------------------------ //
+.lists-list {
+  .list-upvote {
+    @include small {
+      display: block;
+    }
+  }
+  .list-rank {
+    order: 7;
+    span {
+      right: 0;
+      height: 25px;
+      line-height: 25px;
+      width: 30px;
+      text-align: right;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+}
+
+// -------------------------------- list content --------------------------------- //
+.list-heading {
+  .list-title {
+    font-weight: 600;
+    @include small {
+      font-size: 14px;
+    }
+    @include medium-large {
+      font-size: 16px;
+    }
+    &:visited {
+      color: black;
+    }
+  }
+  .list-domain {
+    @include small {
+      font-size: 12px;
+    }
+    @include medium-large {
+      font-size: 13px;
+    }
+  }
+}
+
+.list-meta {
+  a {
+    text-transform: capitalize;
+    &:link,
+    &:visited,
+    &:active {
+      font-weight: normal;
+    }
+    &:hover {
+      color: gray;
+      text-decoration: underline;
+    }
+  }
+}
+
+.list-body, .page-body {
+  font-size: 13px;
+  @include large {
+    font-size: 14px;
+  }
+}
+
+// remove "View:"
+.lists-list-views {
+  .menu-top-level {
+    visibility: hidden;
+  }
+
+}

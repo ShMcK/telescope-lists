@@ -1,0 +1,64 @@
+<!-- 
+
+Lists List Component
+
+title (String)
+| The title of the list list
+
+incoming (Cursor)
+| A cursor containing the new lists since render
+
+listsCursor (Cursor)
+| A cursor containing the post list
+
+listsCount (Number)
+| How many lists are loaded
+
+listsReady (Boolean)
+| Whether the subscription is ready
+
+hasMorePosts (Boolean)
+| Whether there are still more posts that can be loaded
+
+loadMoreHandler (Function)
+| What to do when the user clicks "load more"
+
+-->
+
+<template name="lists_list">
+  <div class="posts-wrapper grid grid-module">
+    {{> listsListIncoming data=incoming}}
+    <div class="posts list {{listsLayout}}" aria-live="polite">
+      {{#each listsCursor}}
+        {{> before_list_item}}
+        {{> list_item}}
+        {{> after_list_item}}
+      {{/each}}
+    </div>
+    {{> listsLoadMore}}
+  </div>
+</template>
+
+<template name="listsListIncoming">
+  {{#if count}}
+    <a class="more-button show-new grid-module" href="">
+      <span>
+        {{_ "view"}} {{count}} {{_ "new"}} {{pluralize count "list"}}
+      </span>
+    </a>
+  {{/if}}
+</template>
+
+<template name="listsLoadMore">
+  {{#if listsReady}}
+    {{#if hasPosts}}
+      {{#if hasMorePosts}}
+        <a class="more-button" href="#"><span>{{_ "load_more"}}</span></a>
+      {{/if}}
+    {{else}}
+      <div class="no-posts">{{_ "sorry_we_couldnt_find_any_lists"}}</div>
+    {{/if}}
+  {{else}}
+    <div class="loading-module">{{> spinner}}</div>
+  {{/if}}
+</template>

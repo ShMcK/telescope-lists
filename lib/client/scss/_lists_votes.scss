@@ -1,0 +1,23 @@
+
+.list-upvote {
+  text-align: center;
+  font-size: 11px;
+  color: $main;
+  font-weight: bold;
+  .upvote-link {
+    transform: scale(1.5);
+    .icon-upvote {
+      border: none;
+    }
+    &.voted {
+      i.icon-voted {
+        border: none;
+        color: black;
+      }
+    }
+  }
+  .points {
+    display: flex;
+    flex-direction: column;
+  }
+}
