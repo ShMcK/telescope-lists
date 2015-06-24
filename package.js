@@ -13,8 +13,12 @@ Package.onUse(function (api) {
     'telescope:i18n@0.20.4',
     'telescope:settings@0.20.4',
     'telescope:users@0.20.4',
-    'telescope:comments@0.20.4'
+    'telescope:comments@0.20.4',
+    'telescope:theme-base@0.20.4',
+    'telescope:theme-hubble@0.20.4'
   ]);
+
+
 
   // i18n must come first & last
   api.addFiles([
@@ -46,6 +50,8 @@ Package.onUse(function (api) {
     'lib/client/templates/modules/list_title.js',
     'lib/client/templates/modules/list_upvote.html',
     'lib/client/templates/modules/list_upvote.js',
+    'lib/client/templates/modules/list_posts.html',
+    'lib/client/templates/modules/list_posts.js',
     'lib/client/templates/list_body.html',
     'lib/client/templates/list_edit.html',
     'lib/client/templates/list_edit.js',
@@ -61,7 +67,8 @@ Package.onUse(function (api) {
     'lib/client/templates/lists_list/lists_list.html',
     'lib/client/templates/lists_list/lists_list.js',
     'lib/client/templates/lists_list/lists_list_controller.html',
-    'lib/client/templates/lists_list/lists_list_controller.js'
+    'lib/client/templates/lists_list/lists_list_controller.js',
+    'lib/client/scss/screen.scss'
   ], 'client');
 
   // both

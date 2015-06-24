@@ -1,5 +1,8 @@
-@import 'lists';
-@import "lists_avatars";
-@import "lists_discuss";
-@import "lists_votes";
-@import "lists_load_more";
+@import 'partials/colors';
+@import 'partials/grid';
+@import 'partials/typography';
+@import 'lists/lists';
+@import "lists/lists_avatars";
+@import "lists/lists_discuss";
+@import "lists/lists_votes";
+@import "lists/lists_load_more";

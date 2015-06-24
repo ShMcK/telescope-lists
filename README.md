@@ -2,8 +2,11 @@
 
 Unfinished, unpublished, unannounced.
 
-- add to list button
-- list list composed of Post Ids with User Id
-    - Lists
-- list menu item
+- New collection of Lists
+- Users can create lists of their favorite links
+- view, upvote/downvote, comment on lists
+- Seperate style for lists
+- route at '/lists'
+- "Lists" secondary nav link
+- "Add to List" button option in posts list
 
