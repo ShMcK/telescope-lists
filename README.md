@@ -1,5 +1,7 @@
 #Telescope:Lists (WIP)
 
+Meteor package for use with [Telescope.js](https://github.com/TelescopeJS/Telescope).
+
 Unfinished, unpublished, unannounced.
 
 - New collection of Lists

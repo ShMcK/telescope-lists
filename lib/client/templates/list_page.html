@@ -1,12 +1,15 @@
 <template name="list_page">
   <div class="single-list grid">
-    <div class="lists lists-list">
+    <div class="posts posts-list">
       {{> list_item}}
     </div>
     {{#if body}}
-      {{> list_body}}
+      {{> post_body}}
     {{/if}}
-    {{> comment_submit}}
-    {{> comment_list}}
+
+    {{> list_posts}}
+
+    <!--{{> comment_submit}}-->
+    <!--{{> comment_list}}-->
   </div>
 </template>
