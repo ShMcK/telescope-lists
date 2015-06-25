@@ -1,10 +1,10 @@
 <template name="list_posts">
 
-  {{#if posts}}
+  {{#if postIds}}
     <div class="list-posts">
       <ul>
-        {{#each posts}}
-          <li><a href="/posts/{{this}}" class="list-post-link">{{this}}</a></li>
+        {{#each postIds}}
+          <li><a href="/posts/{{this._id}}" class="list-post-link">{{this.title}}</a></li>
         {{/each}}
       </ul>
     </div>
