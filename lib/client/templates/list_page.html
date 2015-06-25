@@ -1,11 +1,4 @@
 <template name="list_page">
-  {{#if isPending}}
-    <div class="grid">
-      <div class="error pending-message module">
-        {{_ "thanks_your_list_is_awaiting_approval"}}
-      </div>
-    </div>
-  {{/if}}
   <div class="single-list grid">
     <div class="lists lists-list">
       {{> list_item}}

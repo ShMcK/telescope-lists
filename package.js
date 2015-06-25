@@ -82,9 +82,10 @@ Package.onUse(function (api) {
 
     'lib/menus.js',
     'lib/modules.js',
-    //'lib/user.js',
 
-    'lib/methods.js',
+    'lib/methods/submit.js',
+    'lib/methods/edit.js',
+    'lib/methods/methods.js',
     'lib/routes.js'
   ], ['client', 'server']);
 
